@@ -1,3 +1,14 @@
+/*
+eslint no-unused-vars: [
+  "error",
+  {
+    "args": "none",
+    "vars": "local",
+    "varsIgnorePattern": "data"
+  }
+]
+*/
+
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
@@ -170,7 +181,5 @@ module.exports = {
   getSchedule,
   getOldestFromFirstSpecies,
   increasePrices,
-  getEmployeeCoverage
+  getEmployeeCoverage,
 };
-
-
