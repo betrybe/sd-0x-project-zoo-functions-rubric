@@ -1,34 +1,81 @@
-const assert = require('assert');
-const zoo = require('../src/zoo');
+const { name } = require('faker/locale/pt_BR');
+const { calculateEntry, countEntrants } = require('../src/calculateEntry');
 
-describe('Implemente a função calculateEntry', () => {
-  it('Retorna 0 se nenhum argumento for passado', () => {
-    assert.strictEqual(zoo.calculateEntry(), 0);
-  });
+describe('6 - Crie o cálculo total do preço de entrada', () => {
+  describe('Implemente a função countEntrants', () => {
+    it('Ao receber um array de visitantes, retorna um objeto com a contagem', () => {
+      const entrants = [
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 18 },
+        { name: name.findName(), age: 18 },
+        { name: name.findName(), age: 50 },
+      ];
 
-  it('Retorna 0 se um objeto vazio for passado', () => {
-    assert.strictEqual(zoo.calculateEntry({}), 0);
-  });
+      const actual = countEntrants(entrants);
+      const expected = { adult: 2, child: 3, senior: 1 }
+      expect(actual).toEqual(expected);
+    })
+  })
 
-  it('Retorna o preço total a ser cobrado dado o número de adultos, crianças e idosos', () => {
-    let entrants = { 'Adult': 2, 'Child': 3, 'Senior': 1 };
-    let actual = zoo.calculateEntry(entrants);
-    assert.strictEqual(actual, 187.94);
+  describe('Implemente a função calculateEntry', () => {
+    it('Retorna 0 se nenhum argumento for passado', () => {
+      const actual = calculateEntry();
+      const expected = 0;
+      expect(actual).toEqual(expected);
+    });
 
-    entrants = { 'Adult': 1 };
-    actual = zoo.calculateEntry(entrants);
-    assert.strictEqual(actual, 49.99);
+    it('Retorna 0 se um objeto vazio for passado', () => {
+      const actual = calculateEntry({});
+      const expected = 0;
+      expect(actual).toEqual(expected);
+    });
 
-    entrants = { 'Senior': 1 };
-    actual = zoo.calculateEntry(entrants);
-    assert.strictEqual(actual, 24.99);
+    it('Ao receber um array de pessoas com 3 crianças, 2 pessoas adultas e 1 pessoa mais velha retorna o valor correto', () => {
+      const entrants = [
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 18 },
+        { name: name.findName(), age: 18 },
+        { name: name.findName(), age: 50 }
+      ];
 
-    entrants = { 'Child': 1 };
-    actual = zoo.calculateEntry(entrants);
-    assert.strictEqual(actual, 20.99);
+      const actual = calculateEntry(entrants);
+      const expected = 187.94;
+      expect(actual).toEqual(expected);
+    });
 
-    entrants = { 'Child': 1, 'Senior': 1 };
-    actual = zoo.calculateEntry(entrants);
-    assert.strictEqual(actual, 45.98);
+    it('Ao receber um array com 1 pessoa adulta retorna o valor correto', () => {
+      const entrants = [{ name: name.findName(), age: 18 }];
+      const actual = calculateEntry(entrants);
+      const expected = 49.99;
+      expect(actual).toEqual(expected);
+    });
+
+    it('Ao receber um array com 1 pessoa mais velha retorna o valor correto', () => {
+      const entrants = [{ name: name.findName(), age: 50 }];
+      const actual = calculateEntry(entrants);
+      const expected = 24.99;
+      expect(actual).toEqual(expected);
+    });
+
+    it('Ao receber um array com 1 criança retorna o valor correto', () => {
+      const entrants = [{ name: name.findName(), age: 5 }];
+      const actual = calculateEntry(entrants);
+      const expected = 20.99;
+      expect(actual).toEqual(expected);
+    });
+
+    it('Ao receber um array com 1 criança e 1 pessoa mais velha retorna o valor correto', () => {
+      const entrants = [
+        { name: name.findName(), age: 5 },
+        { name: name.findName(), age: 50 }
+      ];
+      const actual = calculateEntry(entrants);
+      const expected = 45.98;
+      expect(actual).toEqual(expected);
+    });
   });
 });

@@ -17,6 +17,7 @@ module.exports = {
       name: 'lions',
       popularity: 4,
       location: 'NE',
+      availability: ['Tuesday', 'Thursday', 'Saturday', 'Sunday'],
       residents: [
         {
           name: 'Zena',
@@ -45,6 +46,7 @@ module.exports = {
       name: 'tigers',
       popularity: 5,
       location: 'NW',
+      availability: ['Wednesday', 'Friday', 'Saturday', 'Tuesday'],
       residents: [
         {
           name: 'Shu',
@@ -63,6 +65,7 @@ module.exports = {
       name: 'bears',
       popularity: 5,
       location: 'NW',
+      availability: ['Tuesday', 'Wednesday', 'Sunday', 'Saturday'],
       residents: [
         {
           name: 'Hiram',
@@ -86,6 +89,7 @@ module.exports = {
       name: 'penguins',
       popularity: 4,
       location: 'SE',
+      availability: ['Tuesday', 'Wednesday', 'Sunday', 'Saturday'],
       residents: [
         {
           name: 'Joe',
@@ -114,6 +118,7 @@ module.exports = {
       name: 'otters',
       popularity: 4,
       location: 'SE',
+      availability: ['Friday', 'Thursday', 'Wednesday', 'Saturday'],
       residents: [
         {
           name: 'Neville',
@@ -142,6 +147,7 @@ module.exports = {
       name: 'frogs',
       popularity: 2,
       location: 'SW',
+      availability: ['Saturday', 'Friday', 'Thursday', 'Wednesday'],
       residents: [
         {
           name: 'Cathey',
@@ -160,6 +166,7 @@ module.exports = {
       name: 'snakes',
       popularity: 3,
       location: 'SW',
+      availability: ['Sunday', 'Saturday', 'Frida', 'Thursday'],
       residents: [
         {
           name: 'Paulette',
@@ -178,6 +185,7 @@ module.exports = {
       name: 'elephants',
       popularity: 5,
       location: 'NW',
+      availability: ['Friday', 'Saturday', 'Sunday', 'Tuesday'],
       residents: [
         {
           name: 'Ilana',
@@ -206,6 +214,7 @@ module.exports = {
       name: 'giraffes',
       popularity: 4,
       location: 'NE',
+      availability: ['Wednesday', 'Thursday', 'Tuesday', 'Friday'],
       residents: [
         {
           name: 'Gracia',
@@ -327,8 +336,8 @@ module.exports = {
     Monday: { open: 0, close: 0 },
   },
   prices: {
-    Adult: 49.99,
-    Senior: 24.99,
-    Child: 20.99,
+    adult: 49.99,
+    senior: 24.99,
+    child: 20.99,
   },
 };

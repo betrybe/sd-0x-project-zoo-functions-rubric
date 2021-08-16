@@ -1,8 +1,8 @@
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
 
-# Boas vindas ao repositório do projeto de ES6 e Higher Order Functions!
+## Boas vindas ao repositório do projeto de ES6 e Higher Order Functions!
 
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
+Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #VQV 🚀
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
@@ -12,11 +12,11 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Neste projeto, verificamos se você é capaz de:
 
-- Produzir código legível, conciso e expressivo utilizando as novas funcionalidades do ES6
-- Utilizar as _Higher Order Functions_ para manipular e criar arrays
-- Escolher a _Higher Order Function_ mais adequada para a obtenção de um resultado esperado
-- Aprender a usar de forma conjunta as _Higher Order Functions_
-- Interpretar testes unitários e produzir soluções que atendam a eles
+- Produzir código legível, conciso e expressivo utilizando as novas funcionalidades do ES6;
+- Utilizar as _Higher Order Functions_ para manipular e criar arrays;
+- Escolher a _Higher Order Function_ mais adequada para a obtenção de um resultado esperado;
+- Aprender a usar de forma conjunta as _Higher Order Functions_;
+- Interpretar testes unitários e produzir soluções que atendam a eles.
 
 ---
 
@@ -31,21 +31,18 @@ Neste projeto, verificamos se você é capaz de:
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Requisitos do projeto](#requisitos-do-projeto)
-  - [1. Implemente a função getSpeciesByIds](#1-implemente-a-função-getSpeciesByIds)
-  - [2. Implemente a função getAnimalsOlderThan](#2-implemente-a-função-getAnimalsOlderThan)
-  - [3. Implemente a função getEmployeeByName](#3-implemente-a-função-getEmployeeByName)
-  - [4. Implemente a função createEmployee](#4-implemente-a-função-createEmployee)
-  - [5. Implemente a função isManager](#5-implemente-a-função-isManager)
-  - [6. Implemente a função addEmployee](#6-implemente-a-função-addEmployee)
-  - [7. Implemente a função countAnimals](#7-implemente-a-função-countAnimals)
-  - [8. Implemente a função calculateEntry](#8-implemente-a-função-calculateEntry)
-  - [9. Implemente a função getAnimalMap](#9-implemente-a-função-getAnimalMap)
-  - [10. Implemente a função getSchedule](#10-implemente-a-função-getSchedule)
-  - [11. Implemente a função getOldestFromFirstSpecies](#11-implemente-a-função-getOldestFromFirstSpecies)
-  - [12. Implemente a função increasePrices](#12-implemente-a-função-increasePrices)
-  - [13. Implemente a função getEmployeeCoverage](#13-implemente-a-função-getEmployeeCoverage)
+  - [1. Implemente a função `getSpeciesByIds`](#1-implemente-a-função-getspeciesbyids)
+  - [2. Implemente a função `getAnimalsOlderThan`](#2-implemente-a-função-getanimalsolderthan)
+  - [3. Implemente a função `getEmployeeByName`](#3-implemente-a-função-getemployeebyname)
+  - [4. Implemente a função `isManager`](#4-implemente-a-função-ismanager)
+  - [5. Implemente a função `countAnimals`](#5-implemente-a-função-countanimals)
+  - [6. Implemente a função `calculateEntry`](#6-implemente-a-função-calculateentry)
+  - [7. Implemente a função `getAnimalMap`](#7-implemente-a-função-getanimalmap)
+  - [8. Implemente a função `getSchedule`](#8-implemente-a-função-getschedule)
+  - [9. Implemente a função `getOldestFromFirstSpecies`](#9-implemente-a-função-getoldestfromfirstspecies)
+  - [10. Implemente a função `getEmployeesCoverage`](#10-implemente-a-função-getemployeescoverage)
 - [Avisos finais](#avisos-finais)
-  - [Code Review](#revisando-um-pull-request)
+  - [Revisando um Pull Request](#revisando-um-pull-request)
   - [Avaliação do projeto](#avaliação-do-projeto)
   - [Ordem dos requisitos no avaliador automático](#ordem-dos-requisitos-no-avaliador-automático)
 
@@ -53,36 +50,42 @@ Neste projeto, verificamos se você é capaz de:
 
 ## Entregáveis
 
-### O QUE DEVERÁ SER DESENVOLVIDO
+### O que deverá ser desenvolvido
 
 Você implementará várias funções para atender aos requisitos propostos e garantir que todas as funções passem nos testes unitários.
 
-### DESENVOLVIMENTO
+---
+
+### Desenvolvimento
 
 Este repositório contém um _template_ de uma aplicação **NodeJS** (observe a existência do arquivo _package.json_).
+
 Após clonar o projeto e instalar as dependências, você não precisará realizar nenhuma configuração adicional.
+
 Todos os arquivos estritamente necessários para finalizar o projeto já estão criados, **não** sendo necessária a criação de outros arquivos.
-Você deverá completar as funções e testes unitários de forma a satisfazer os requisitos listados na próxima seção.
 
-Na pasta raíz do projeto, temos a pasta `src` e a pasta `tests`. A pasta `src` é composta pelo arquivo `zoo.js`, que contém as funções a serem implementadas, e o arquivo `data.js`, que armazena os dados que serão utilizados. Já a pasta `tests`, contém os testes unitários correspondentes a cada função do arquivo `zoo.js`.
+Você deverá completar as funções de forma a satisfazer os requisitos listados na próxima seção. Na pasta raíz do projeto, temos as pastas `src`, `tests` e `data` . A pasta `src` é composta por arquivos referentes a cada uma das funções que você irá implementar, a pasta `data` contém o arquivo `zoo_data.js`, que armazena os dados que serão utilizados. Já a pasta `tests`, contém os testes unitários correspondentes a cada função, o nome do arquivo é o nome da função alvo acrescido do sufixo `.test.js`.
 
-O nome dos arquivos também segue uma ordem definida. Basicamente, os arquivos de teste possuem o nome da função alvo acrescido do nome `.spec.js`.
-O arquivo `src/zoo.js` conterá a implementação de uma função, `getSpeciesByIds,` por exemplo, e o arquivo `tests/getSpeciesByIds.spec.js` conterá os testes unitários referentes à função.
+**Por exemplo:** o arquivo `src/getSpeciesByIds.js` conterá a implementação da função `getSpeciesByIds` e o arquivo `tests/getSpeciesByIds.spec.js` conterá os testes unitários referentes a ela.
 
-Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que não estão indicados nos requisitos não devem ser alterados, ou sua avaliação poderá ser comprometida.**
+**Os arquivos que não estão indicados nos requisitos não devem ser alterados, ou sua avaliação poderá ser comprometida.**
 
-### DATA DE ENTREGA
+---
 
-  - O projeto tem até a seguinte data: `dd/mm/yyyy - 14:00h` para ter entregue a avaliação final.
+### Data de entrega
+
+- Projeto individual;
+- Serão 2 dias de projeto;
+- Data de entrega para avaliação final do projeto: `dd/mm/yyyy - 14:00h`
 
 ---
 
 ## Instruções para entregar seu projeto
 
-### ANTES DE COMEÇAR A DESENVOLVER
+### Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-0x-project-zoo-functions-rubric.git`.
+  * `git clone git@github.com:tryber/sd-0x-project-zoo-functions-rubric.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-0x-project-zoo-functions-rubric`
 
@@ -124,11 +127,15 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
   * **Não se preocupe em preencher mais nada por enquanto!**
   * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-zoo-functions-rubric/pulls) e confira que o seu _Pull Request_ está criado.
 
-### DURANTE O DESENVOLVIMENTO
+---
 
-📌 **PULL REQUESTS COM ISSUES NO ESLINT NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!**
+### Durante o desenvolvimento
 
-📌 **OS NOMES DOS ARQUIVOS NÃO DEVEM SER ALTERADOS!** Você pode adicionar outros arquivos, se julgar necessário. Qualquer dúvida, procure a Pessoa Instrutora que te acompanha.
+📌 **Pull Requests com issues no eslint não serão avaliadas, atente-se para resolvê-las antes de finalizar o desenvolvimento**
+
+📌 **Os nomes dos arquivos não devem ser alterados.**
+
+* Você pode adicionar outros arquivos, se julgar necessário. Qualquer dúvida, procure a Pessoa Instrutora que te acompanha.
 
 * Faça `commits` das alterações que você fizer no código regularmente
 
@@ -143,7 +150,11 @@ Você só deve alterar os arquivos indicados nos requisitos. **Os arquivos que n
   6. `npm test` _(executa todos os testes presentes na aplicação)_
   7. `npm test path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
+### Dica para o desenvolvimento
+
+Em sua vida de pessoa desenvolvedora, o pensamento algoritmico, processo de quebrar problemas complexos em pequenas partes para resolvê-los, ajudará a solucionar de maneira mais fácil os problemas complexos. Assim, uma boa forma de começar a desenvolver um projeto é lembrar que as funções são compostas por pequenos blocos de lógica que têm finalidade (função) específica. Ou seja, quebrar problemas grandes em menores tornará tudo mais simples de se entender e você sempre poderá reutilizar esses códigos em outras partes de sua aplicação.
+
+### Depois de terminar o desenvolvimento (Opcional)
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
@@ -154,204 +165,337 @@ Para **"entregar"** seu projeto, siga os passos a seguir:
 
 Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
-📌 **LEMBRE-SE DE GARANTIR QUE TODAS AS ISSUES COMENTADAS PELO ESLINT ESTÃO RESOLVIDAS**
+📌 **Lembre-se de garantir que todas as issues comentadas pelo eslint estão resolvidas**
 
 ---
 
 ## Requisitos do projeto
 
-Vocẽ deverá implementar as funções que estão no `src/zoo.js` para passarem em cada um dos testes. O teste `test/getSpeciesByIds.test.js`, por exemplo, testa a função `getSpeciesByIds`, que já está criada dentro do `src/zoo.js`, embora ainda não contenha lógica alguma. Para ver o que cada função precisa retornar, basta ver o `assert` de cada um dos testes.
+Você deverá implementar as funções que estão na pasta `src`. Para ver o retorno que a função deverá ter, leia o arquivo de testes referente a ela. Lembre-se de aplicar as novas funcionalidades do ES6 como arrow functions, template literals, spread operator, parâmetro rest, object destructuring, entre outras. Utilize também as _Higher Order Functions_.
 
-Utilize as novas funcionalidades do ES6 como arrow functions, template literals, spread operator, parâmetro rest, object destructuring, entre outras. Utilize também as _Higher Order Functions_.
+**Dica**: uma importante soft-skill é saber como gerenciar seu tempo. Os exercícios não estão ordenados por ordem de complexidade e uns são mais difíceis que os outros. Caso tenha dificuldade em algum deles, pule-o, resolva outro, e, quando se sentir confortável, volte ao exercício em questão. A ideia é não ficar preso a um problema por um longo período. Realizar outros exercícios pode te ajudar a enxergar e/ou aprender novas maneiras de se chegar ao resultado esperado.
 
-**Dica**: uma importante soft-skill é saber como gerenciar seu tempo. Alguns exercícios são mais difíceis que outros, e não estão em ordem de complexidade. Caso tenha dificuldade para realizar algum exercício, pule-o, resolva outro, e, quando se sentir confortável, volte ao exercício em questão. A ideia é não ficar preso a um problema por um longo período. Realizar outros exercícios pode te ajudar a enxergar e/ou aprender novas maneiras de se chegar ao resultado esperado.
+Antes de começar, analise o arquivo `data/zoo_data.js`, para ver os dados que serão usados.
 
-Antes de começar, analise o arquivo `src/data.js`, para ver os dados que serão usados.
+---
 
-### 1. IMPLEMENTE A FUNÇÃO getSpeciesByIds
+### 1. Implemente a função `getSpeciesByIds`
 
-  Esta função é responsável pela busca das espécies de animais por id. Ela retorna um array contendo as espécies referentes aos ids passados como parâmetro, podendo receber um ou mais ids.
+Esta função é responsável pela busca das espécies de animais por id. Ela retorna um array contendo as espécies referentes aos ids passados como parâmetro, podendo receber um ou mais ids.
 
-  **Observações técnicas**
+**Observações técnicas**
 
-  - O parâmetro desta função pode ser alterado para atender ao requisito proposto
+- O parâmetro desta função pode ser alterado para atender ao requisito proposto
 
-  **O que será avaliado**
+**O que será avaliado**
 
-  - Caso receba nenhum parâmetro, necessário retornar um array vazio
-  - Ao receber como parâmetro um único id, retorna um array com a espécie referente à esse id
-  - Ao receber mais de um id, retorna um array com as espécies referentes aos ids
+- Caso receba nenhum parâmetro, necessário retornar um array vazio
+- Ao receber como parâmetro um único id, retorna um array com a espécie referente à esse id
+- Ao receber mais de um id, retorna um array com as espécies referentes aos ids
 
-### 2. IMPLEMENTE A FUNÇÃO getAnimalsOlderThan
+---
 
-  Esta função, a partir do nome de uma espécie e uma idade mínima, verifica se todos os animais daquela espécie possuem a idade mínima especificada
+### 2. Implemente a função `getAnimalsOlderThan`
 
-  **Observações técnicas**
+Esta função, a partir do nome de uma espécie e uma idade mínima, verifica se todos os animais daquela espécie possuem a idade mínima especificada
 
-  - Deve retornar um valor booleano
+**Observações técnicas**
 
-  **O que será avaliado**
+- Deve retornar um valor booleano
 
-  - Ao passar o nome de uma espécie e uma idade, testa se todos os animais desta
- espécie possuem a idade mínima especificada
+**O que será avaliado**
 
-### 3. IMPLEMENTE A FUNÇÃO getEmployeeByName
+- Ao passar o nome de uma espécie e uma idade, testa se todos os animais desta
+espécie possuem a idade mínima especificada
 
-   Esta função é responsável pela busca das pessoas colaboradoras através do primeiro ou do último nome delas
+---
 
-  **O que será avaliado**
+### 3. Implemente a função `getEmployeeByName`
 
-  - Sem parâmetros, retorna um objeto vazio
-  - Quando provido o primeiro nome do funcionário, retorna o objeto do funcionário
-  - Quando provido o último nome do funcionário, retorna o objeto do funcionário
+Esta função é responsável pela busca das pessoas colaboradoras através do primeiro ou do último nome delas
 
-### 4. IMPLEMENTE A FUNÇÃO createEmployee
+**O que será avaliado**
 
-  A função, a partir de informações recebidas nos parâmetros, é capaz de criar um objeto equivalente ao de uma pessoa colaboradora, retornando-o
+- Sem parâmetros, retorna um objeto vazio
+- Quando provido o primeiro nome do funcionário, retorna o objeto do funcionário
+- Quando provido o último nome do funcionário, retorna o objeto do funcionário
 
-  **Observações técnicas**
+---
 
-  - O parâmetro `personalInfo` recebe um objeto que contém o `id`, o `firstName` e o `lastName`
-  - O parâmetro `associatedWith` recebe um objeto que contém dois array: `managers` e `responsibleFor`
+### 4. Implemente a função `getRelatedEmployees`
 
-  **O que será avaliado**
+Considerando a boa prática de dividir o código em partes menores, apresentamos a função `getRelatedEmployees` em que você deverá dividí-la em duas funções: 
+  
+  1 - `isManager` - que será responsável por verificar se uma pessoa colaboradora é gerente ou não. O retorno dessa função deve ser um booleano: `true`ou `false`;
+  2 - `getRelatedEmployees` - que utiliza a primeira função para apresentar as seguintes saídas: 
+     * se for uma pessoa colaboradora gerente, deve retornar um array contendo os nomes das pessoas colaboradoras que ela é responsável;
+     * se **não** for uma pessoa colaboradora gerente, deverá ser lançado um error gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"O id inserido não é de uma pessoa colaboradora gerente!"**. Exemplo:
 
-  - Cria um novo colaborador a partir de objetos contendo `informações pessoais` e `gerentes e animais gerenciados`.
+```javascript
+throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
+```
 
-### 5. IMPLEMENTE A FUNÇÃO isManager
-
-  Verifica se uma pessoa colaboradora, a partir de seu id, ocupa cargo de gerência.
-
-  **Observações técnicas**
-
-  - Deve retornar um valor booleano
-
-  **O que será avaliado**
-
-  - Testa se o id passado é de um gerente
-
-### 6. IMPLEMENTE A FUNÇÃO addEmployee
-
-  A função irá adicionar uma nova pessoa colaboradora ao array `employees`, presente no arquivo `data.js`.
-
-  **O que será avaliado**
-
-  - Adiciona um funcionário no fim da lista
-
-### 7. IMPLEMENTE A FUNÇÃO countAnimals
-
-  Esta função é responsável por contabilizar a quantidade de animais.
+Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
   **Observações técnicas**
 
-  - Sem parâmetros, retorna um objeto
-  - Com o nome de uma espécie de animal, retorna um número
+  - Retorna um array contendo nome e sobrenome das pessoas colaboradoras gerenciadas por determinada pessoa com cargo de gerência.
+    Exemplo de output:
+
+  ```javascript
+  [ 'Burl Bethea', 'Ola Orloff', 'Emery Elser' ];
+  ```
+
+  - Dispara um erro com a mensagem: "O id inserido não é de uma pessoa colaboradora gerente!".
 
   **O que será avaliado**
 
-  - Sem parâmetros, retorna animais e suas quantidades
-  - Com o nome de uma espécie de animal, retorna somente a quantidade
+  - Se o id passado for de um gerente, retorna um array contendo nome e sobrenome das pessoas colaboradoras que ela é responsável;
+  - Se o id passado **não** for de um gerente, dispara um erro com a mensagem: "O id inserido não é de uma pessoa colaboradora gerente!".
 
-### 8. IMPLEMENTE A FUNÇÃO calculateEntry
+---
 
-  A partir da quantidade de visitantes e a faixa etária de cada um, esta função é responsável por retornar o preço total a ser cobrado
+### 5. Implemente a função `countAnimals`
 
-  **Observações técnicas**
+  Esta função é responsável por contabilizar a quantidade de animais de cada espécie.
 
-  - O parâmetro `entrants` recebe um objeto que contém as chaves `Adult`, `Child` e `Senior`, com suas respectivas quantidades de pessoas
+**Observações técnicas**
 
-  **O que será avaliado**
+  - Se nenhum argumento for passado, retorna um objeto cujo o nome de cada espécie é uma chave desse objeto, e o total de animais dessa espécie é o seu valor
+  - Com o argumento `{ specie: 'penguins' }`, retorna um número, a quantidade de pinguins no zoológico
+  - Com o argumento `{ specie: 'giraffes', genre: 'female' }`, retorna um número, a quantidade de girafas do gênero feminino
 
-  - Retorna 0 se nenhum argumento for passado
-  - Retorna 0 se um objeto vazio for passado
-  - Retorna o preço total a ser cobrado dado o número de adultos, crianças e idosos
+**O que será avaliado**
 
-### 9. IMPLEMENTE A FUNÇÃO getAnimalMap
+  - Sem parâmetros, retorna as espécies e sua quantidade
+  - Recebendo como parâmetro um objeto com a chave `specie`, retorna um número, a quantidade de animais daquela espécie
+  - Recebendo como parâmetro um objeto com a chave `specie` e `genre`, retorna um número, a quantidade de animais daquela espécie, no gênero selecionado
 
-  A função é responsável pelo mapeamento geográfico das espécies e seus animais, podendo ainda filtrá-los por ordem alfabética e gênero, por exemplo
+### 6. Implemente a função `calculateEntry`
 
-  **Observações técnicas**
+Esta função irá receber um array de visitantes no seguinte formato:
 
-  - Analise o teste unitário para entender os retornos que são esperados para esta função
+```javascript
+const entrants = [
+  { name: 'Lara Carvalho', age: 5 },
+  { name: 'Frederico Moreira', age: 5 },
+  { name: 'Pedro Henrique Carvalho', age: 5 },
+  { name: 'Maria Costa', age: 18 },
+  { name: 'Núbia Souza', age: 18 },
+  { name: 'Carlos Nogueira', age: 50 },
+];
+```
 
-  **O que será avaliado**
+Você deve isolar a parte da lógica na função `countEntrants` que se encontra no mesmo arquivo da função `calculateEntry`. Ela deverá receber o array de visitantes e retornar um objeto com a contagem de acordo com os seguintes critérios de classificação:
 
-  - Sem parâmetros, retorna animais categorizados por localização
-  - Com a opção `includeNames: true` especificada, retorna nomes de animais
-  - Com a opção `sorted: true` especificada, retorna nomes de animais ordenados
-  - Com a opção `sex: 'female'` ou `sex: 'male'` especificada, retorna somente nomes de animais macho/fêmea
-  - Com a opção `sex: 'female'` ou `sex: 'male'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados
-  - Só retorna informações ordenadas e com sexo se a opção `includeNames: true` for especificada
+* Pessoas com idade menor que 18 anos são classificadas como crianças (child);
+* Pessoas com idade maior ou igual a 18 anos e menor que 50 são classicadas como adultas (adult);
+* Pessoas com idade maior ou igual 50 anos são classificadas como pessoas com mais idade (senior).
 
-### 10. IMPLEMENTE A FUNÇÃO getSchedule
+O retorno da função deverá ser um objeto no seguinte formato: `{ child: 3, adult: 2, senior: 1 }`.
 
-  A função é responsável por disponibilizar as informações de horário para uma consulta, que pode querer ter acesso a todo o cronograma da semana ou apenas o cronograma de um dia específico
+**Exemplo de uso da função `countEntrants`:**
 
-  **Observações técnicas**
+```javascript
+countEntrants(entrants);
+```
 
-  - Analise o teste unitário para entender os retornos que são esperados para esta função
+**Saída:**
 
-  **O que será avaliado**
+```json
+{ "child": 3, "adult": 2, "senior": 1 }
+```
 
-  - Sem parâmetros, retorna um cronograma legível para humanos
-  - Se um único dia for passado, retorna somente este dia em um formato legível para humanos
+Após terminar a implementação da função `countEntrants` você deverá utilizá-la para implementar a função `calculateEntry`. Esta deverá receber um array de visitantes e a partir da quantidade de visitantes e faixa etária de cada um, deverá retornar o valor total a ser cobrado.
 
-### 11. IMPLEMENTE A FUNÇÃO getOldestFromFirstSpecies
+**Exemplo de uso da função `calculateEntry`:**
 
-  A função busca por informações do animal mais velho da primeira espécie gerenciada pela pessoa colaboradora do parâmetro
+```javascript
+calculateEntry(entrants);
+```
 
-  **O que será avaliado**
+**Saída:**
 
-  - Passado o id de um funcionário, encontra a primeira espécie de animal
-  gerenciado pelo funcionário, e retorna um array com nome, sexo e idade do
-  animal mais velho dessa espécie
+```javascript
+187.94
+```
 
-### 12. IMPLEMENTE A FUNÇÃO increasePrices
+**Observações técnicas**
 
-  A função é responsável por aumentar o preço das visitas, com base no valor de aumento recebido no parâmetro, em porcentagem
+- Ambas funções recebem como parâmetro um array contendo objetos que representam pessoas.
 
-  **Observações técnicas**
+**O que será avaliado**
 
-  - Se o parâmetro da função recebe o valor 20, o aumento é de 20%
-  - Altera o objeto `prices` do arquivo `data.js`
+- Retorna 0 se nenhum argumento for passado;
+- Retorna 0 se um objeto vazio for passado;
+- Retorna o preço total a ser cobrado dado o array de pessoas.
 
-  **O que será avaliado**
+---
 
-  - Ao passar uma porcentagem, incrementa todos os preços, arrendondados em duas casas decimais
+### 7. Implemente a função `getAnimalMap`
 
-### 13. IMPLEMENTE A FUNÇÃO getEmployeeCoverage
+A função é responsável pelo mapeamento geográfico das espécies e seus animais, podendo ainda filtrá-los por ordem alfabética e gênero, por exemplo
 
-  A função é responsável por consultar as espécies pela qual a pessoa colaborada, recebida no parâmetro através de seu `id`, `firstName` ou `lastName`, é responsável
+**Observações técnicas**
 
-  **Observações técnicas**
+- Analise o teste unitário para entender os retornos que são esperados para esta função
 
-  - Analise o teste unitário para entender os retornos que são esperados para esta função
+**O que será avaliado**
 
-  **O que será avaliado**
+- Sem parâmetros, retorna animais categorizados por localização
+- Com a opção `includeNames: true` especificada, retorna nomes de animais
+- Com a opção `sorted: true` especificada, retorna nomes de animais ordenados
+- Com a opção `sex: 'female'` ou `sex: 'male'` especificada, retorna somente nomes de animais macho/fêmea
+- Com a opção `sex: 'female'` ou `sex: 'male'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados
+- Só retorna informações ordenadas e com sexo se a opção `includeNames: true` for especificada
 
-  - Sem parâmetros, retorna uma lista de funcionários e os animais pelos quais eles são responsáveis
-  - Com o id de um funcionário, retorna os animais pelos quais o funcionário é responsável
-  - Com o primeiro nome de um funcionário, retorna os animais pelos quais o funcionário é responsável
-  - Com o último nome de um funcionário, retorna os animais pelos quais o funcionário é responsável
+---
+
+### 8. Implemente a função `getSchedule`
+
+A função é responsável por disponibilizar as informações de horário dos animais em uma consulta para o usuário, que pode querer ter acesso ao cronograma da semana, de um dia ou de um animal em específico.
+
+**Observações técnicas**
+
+- Analise os testes unitários para entender os retornos que são esperados para esta função.
+- Quebre o problema em funções menores para que fique mais simples de administrar a responsabilidade de cada uma delas.
+
+**O que será avaliado**
+
+- Sem parâmetros, retorna os horários para cada dia e quais animais estarão disponíveis.
+- Com parâmetros que não sejam nem um animal e nem um dia, retorna os horários para cada dia e quais animais estarão disponíveis.
+- Se um único dia for passado, retorna os horários para aquele dia e quais animais estarão disponíveis.
+- Se passar o nome de um animal, deverá retornar um array com os dias em que ele estará em exibição.
+ 
+---
+
+### 9. Implemente a função `getOldestFromFirstSpecies`
+
+A função busca por informações do animal mais velho da primeira espécie gerenciada pela pessoa colaboradora do parâmetro.
+
+**O que será avaliado**
+
+- Passado o id de um funcionário, encontra a primeira espécie de animal gerenciado pelo funcionário, e retorna um array com nome, sexo e idade do animal mais velho dessa espécie.
+
+---
+
+### 10. Implemente a função `getEmployeesCoverage`
+
+Esta função será responsável por associar informações de cobertura das pessoas funcionárias.
+
+A cobertura deverá ser representada por um objeto com as seguintes propriedades:
+
+```javascript
+{
+  "id": "4b40a139-d4dc-4f09-822d-ec25e819a5ad", // id da pessoa
+  "fullName": "Sharonda Spry", // nome completo: firstName + lastName
+  "species": [ "otters", "frogs" ], // espécies as quais a pessoa é responsável
+  "locations": [ "SE", "SW" ] // Um array contendo todas as localizações das espécies
+}
+```
+
+A função deve receber um objeto de opções que determinará seu comportamento, sendo:
+
+* **name**: O nome ou sobrenome da pessoa a ser buscada
+* **id**: O id da pessoa a ser buscada
+
+**Exemplos de uso da função `getEmployeesCoverage`:**
+
+```javascript
+getEmployeesCoverage({ name: 'Sharonda' });
+getEmployeesCoverage({ name: 'Spry' });
+getEmployeesCoverage({ id: '4b40a139-d4dc-4f09-822d-ec25e819a5ad' });
+```
+
+**Saída:**
+
+```json
+{
+  "id": "4b40a139-d4dc-4f09-822d-ec25e819a5ad",
+  "fullName": "Sharonda Spry",
+  "species": [ "otters", "frogs" ],
+  "locations": [ "SE", "SW" ]
+}
+```
+
+Ao ser chamada sem argumentos, deverá retornar um array com a cobertura de todas as pessoas funcionárias:
+
+**Exemplo:**
+
+```javascript
+getEmployeesCoverage();
+```
+
+**Saída:**
+
+```javascript
+[
+  {
+    "id": "c5b83cb3-a451-49e2-ac45-ff3f54fbe7e1",
+    "fullName": "Nigel Nelson",
+    "species": [ "lions", "tigers" ],
+    "locations": [ "NE", "NW" ]
+  },
+  {
+    "id": "0e7b460e-acf4-4e17-bcb3-ee472265db83",
+    "fullName": "Burl Bethea",
+    "species": [ "lions", "tigers", "bears", "penguins" ],
+    "locations": [ "NE", "NW", "NW", "SE" ]
+  },
+  {
+    "id": "fdb2543b-5662-46a7-badc-93d960fdc0a8",
+    "fullName": "Ola Orloff",
+    "species": [ "otters", "frogs", "snakes", "elephants" ],
+    "locations": [ "SE", "SW", "SW", "NW" ]
+  },
+  //[...]
+];
+```
+
+Caso nenhuma pessoa seja encontrada com o nome, sobrenome ou id, deverá ser lançado um error gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"Informações inválidas"**. Exemplo:
+
+```javascript
+throw new Error('Informações inválidas');
+```
+
+Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
+
+**Dica**: Crie funções que dividam a tarefa em partes menores, por exemplo, você poderia criar uma função `getSpecies` encarregada somente por buscar o nome das espécies que a pessoa é responsável.
+
+**Observações técnicas**
+
+- Ao receber o objeto de opções com a propriedade name, procura a pessoa funcionária correspondente
+- A opção name deverá aceitar nome e sobrenome para realizar a busca
+- Ao chamar a função sem argumentos ela deve retornar um array com a cobertura de todas as pessoas funcionárias.
+
+**O que será avaliado**
+
+- Se o objeto de opções tiver a propriedade name, retorna somente a pessoa correspondente;
+- A propriedade name do objeto de opções também funciona usando o segundo nome;
+- Se o objeto de opções tiver a propriedade id, retorna somente a pessoa correspondente;
+- Sem parâmetros, retorna uma lista com a cobertura de todas as pessoas funcionárias;
+- Caso não haja nenhuma pessoa com o nome ou id especificados deverá ser lançado um error.
 
 ---
 
 ## Avisos Finais
 
-### REVISANDO UM PULL REQUEST
+### Revisando um Pull Request
 
 À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
 
 Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
 
-### AVALIAÇÃO DO PROJETO
+---
+
+### Avaliação do projeto
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/2OfLJPn)
-
-### ORDEM DOS REQUISITOS NO AVALIADOR AUTOMÁTICO
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
+Link: [Formulário de avaliação de projeto](https://bit.ly/2OfLJPn)
 
 ---
+
+### Ordem dos requisitos no avaliador automático
+
+O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
