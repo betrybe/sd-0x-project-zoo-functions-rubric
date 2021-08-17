@@ -1,55 +1,43 @@
 {
   "requirements": [
     {
-      "description": "Implemente a função getSpeciesByIds",
+      "description": "1 - Crie uma função que busca as espécies de animais por id",
       "bonus": false
     },
     {
-      "description": "Implemente a função getAnimalsOlderThan",
+      "description": "2 - Crie uma função que verifica a idade mínima dos animais",
       "bonus": false
     },
     {
-      "description": "Implemente a função getEmployeeByName",
+      "description": "3 - Crie uma função que busca as pessoas colaboradoras a partir do primeiro ou último nome",
       "bonus": false
     },
     {
-      "description": "Implemente a função createEmployee",
+      "description": "4 - Crie a gestão dos funcionários de acordo com o respectivo gerente",
       "bonus": false
     },
     {
-      "description": "Implemente a função isManager",
+      "description": "5 - Crie uma função que realiza a contagem dos animais de cada espécie",
       "bonus": false
     },
     {
-      "description": "Implemente a função addEmployee",
+      "description": "6 - Crie o cálculo total do preço de entrada",
       "bonus": false
     },
     {
-      "description": "Implemente a função countAnimals",
+      "description": "7 - Crie um mapeamento geográfico das espécies e seus animais",
       "bonus": false
     },
     {
-      "description": "Implemente a função calculateEntry",
+      "description": "8 - Crie o agendamento que disponibilize as informações de horário dos animais com o dia que os animais estão disponíveis",
       "bonus": false
     },
     {
-      "description": "Implemente a função getAnimalMap",
+      "description": "9 - Crie uma função que busca o animal mais velho da primeira espécie gerenciada",
       "bonus": false
     },
     {
-      "description": "Implemente a função getSchedule",
-      "bonus": false
-    },
-    {
-      "description": "Implemente a função getOldestFromFirstSpecies",
-      "bonus": false
-    },
-    {
-      "description": "Implemente a função increasePrices",
-      "bonus": false
-    },
-    {
-      "description": "Implemente a função getEmployeeCoverage",
+      "description": "10 - Crie uma associação de informações de cobertura das pessoas funcionárias",
       "bonus": false
     }
   ]

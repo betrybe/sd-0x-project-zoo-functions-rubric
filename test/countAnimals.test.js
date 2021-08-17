@@ -12,7 +12,7 @@ describe('5 - Crie uma função que realiza a contagem dos animais de cada espé
         'frogs': 2,
         'snakes': 2,
         'elephants': 4,
-        'giraffes': 6
+        'giraffes': 6,
       };
       const actual = countAnimals();
   
@@ -20,23 +20,31 @@ describe('5 - Crie uma função que realiza a contagem dos animais de cada espé
     });
   
     it('Recebendo como parâmetro um objeto com a chave \'specie\', retorna um número, a quantidade de animais daquela espécie', () => {
-      let actual = countAnimals({ specie: 'penguins' });
-      let expected = 4;
-      expect(actual).toBe(expected);
+      {
+        const actual = countAnimals({ specie: 'penguins' });
+        const expected = 4;
+        expect(actual).toBe(expected);
+      }
   
-      actual = countAnimals({ specie: 'giraffes' });
-      expected = 6;
-      expect(actual).toBe(expected);
+      {
+        const actual = countAnimals({ specie: 'giraffes' });
+        const expected = 6;
+        expect(actual).toBe(expected);
+      }
     });
   
     it('Recebendo como parâmetro um objeto com a chave \'specie\' e \'genre\', retorna um número, a quantidade de animais daquela espécie, no gênero selecionado', () => {
-      let actual = countAnimals({ specie: 'bears', genre: 'female' });
-      let expected = 0;
-      expect(actual).toBe(expected);
+      {
+        const actual = countAnimals({ specie: 'bears', genre: 'female' });
+        const expected = 0;
+        expect(actual).toBe(expected);
+      }
   
-      actual = countAnimals({ specie: 'elephants', genre: 'male' });
-      expected = 2;
-      expect(actual).toBe(expected);
+      {
+        const actual = countAnimals({ specie: 'elephants', genre: 'male' });
+        const expected = 2;
+        expect(actual).toBe(expected);
+      }
     });
   });
 });

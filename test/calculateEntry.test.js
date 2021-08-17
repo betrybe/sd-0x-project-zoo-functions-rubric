@@ -14,7 +14,7 @@ describe('6 - Crie o cálculo total do preço de entrada', () => {
       ];
 
       const actual = countEntrants(entrants);
-      const expected = { adult: 2, child: 3, senior: 1 }
+      const expected = { adult: 2, child: 3, senior: 1 };
       expect(actual).toEqual(expected);
     })
   })
@@ -39,7 +39,7 @@ describe('6 - Crie o cálculo total do preço de entrada', () => {
         { name: name.findName(), age: 5 },
         { name: name.findName(), age: 18 },
         { name: name.findName(), age: 18 },
-        { name: name.findName(), age: 50 }
+        { name: name.findName(), age: 50 },
       ];
 
       const actual = calculateEntry(entrants);
@@ -71,7 +71,7 @@ describe('6 - Crie o cálculo total do preço de entrada', () => {
     it('Ao receber um array com 1 criança e 1 pessoa mais velha retorna o valor correto', () => {
       const entrants = [
         { name: name.findName(), age: 5 },
-        { name: name.findName(), age: 50 }
+        { name: name.findName(), age: 50 },
       ];
       const actual = calculateEntry(entrants);
       const expected = 45.98;

@@ -1,6 +1,6 @@
 const getSpeciesByIds = require('../src/getSpeciesByIds');
 
-describe('1 - Crie uma função que busca as espécies de animais', () => {
+describe('1 - Crie uma função que busca as espécies de animais por id', () => {
   describe('Implemente a função getSpeciesByIds', () => {
     it('Caso receba nenhum parâmetro, necessário retornar um array vazio', () => {
       const actual = getSpeciesByIds();
@@ -21,9 +21,9 @@ describe('1 - Crie uma função que busca as espécies de animais', () => {
           { name: 'Zena', sex: 'female', age: 12 },
           { name: 'Maxwell', sex: 'male', age: 15 },
           { name: 'Faustino', sex: 'male', age: 7 },
-          { name: 'Dee', sex: 'female', age: 14 }
-        ]
-      }]
+          { name: 'Dee', sex: 'female', age: 14 },
+        ],
+      }];
   
       expect(actual).toEqual(expected);
     });
@@ -44,8 +44,8 @@ describe('1 - Crie uma função que busca as espécies de animais', () => {
           { name: 'Zena', sex: 'female', age: 12 },
           { name: 'Maxwell', sex: 'male', age: 15 },
           { name: 'Faustino', sex: 'male', age: 7 },
-          { name: 'Dee', sex: 'female', age: 14 }
-        ]
+          { name: 'Dee', sex: 'female', age: 14 },
+        ],
       },
       {
         id: 'e8481c1d-42ea-4610-8e11-1752cfc05a46',
@@ -55,8 +55,8 @@ describe('1 - Crie uma função que busca as espécies de animais', () => {
         availability: ['Wednesday', 'Friday', 'Saturday', 'Tuesday'],
         residents: [
           { name: 'Shu', sex: 'female', age: 19 },
-          { name: 'Esther', sex: 'female', age: 17 }
-        ]
+          { name: 'Esther', sex: 'female', age: 17 },
+        ],
       }];
   
       expect(actual).toEqual(expected);

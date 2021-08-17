@@ -8,6 +8,7 @@ describe('4 - Crie a gestão dos funcionários de acordo com o respectivo gerent
       const expected = true;
       expect(actual).toBe(expected);
     });
+
     it('Testa se o id passado é de um gerente', () => {
       const actual = isManager('4b40a139-d4dc-4f09-822d-ec25e819a5ad');
       const expected = false;
@@ -20,12 +21,11 @@ describe('4 - Crie a gestão dos funcionários de acordo com o respectivo gerent
       const actual = getRelatedEmployees('9e7d4524-363c-416a-8759-8aa7e50c0992');
       const expected = [ 'Burl Bethea', 'Ola Orloff', 'Emery Elser' ];
       expect(actual).toEqual(expected);
-    })
+    });
+
     it('Dispara erro com a mensagem "O id inserido não é de uma pessoa colaboradora gerente!", quando o id inserido não for de uma pessoa colaboradora genrente', () => {
       const actual = '4b40a139-d4dc-4f09-822d-ec25e819a5ad';
       expect(() => getRelatedEmployees(actual)).toThrow(/^O id inserido não é de uma pessoa colaboradora gerente!$/);
-    })
-  
-});
-
+    });
+  });
 });

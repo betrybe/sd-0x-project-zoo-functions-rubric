@@ -9,7 +9,7 @@ describe('7 - Crie um mapeamento geográfico das espécies e seus animais', () =
         NE: ['lions', 'giraffes'],
         NW: ['tigers', 'bears', 'elephants'],
         SE: ['penguins', 'otters'],
-        SW: ['frogs', 'snakes']
+        SW: ['frogs', 'snakes'],
       };
   
       expect(actual).toEqual(expected);
@@ -22,21 +22,21 @@ describe('7 - Crie um mapeamento geográfico das espécies e seus animais', () =
       const expected = {
         NE: [
           { lions: ['Zena', 'Maxwell', 'Faustino', 'Dee'] },
-          { giraffes: ['Gracia', 'Antone', 'Vicky', 'Clay', 'Arron', 'Bernard'] }
+          { giraffes: ['Gracia', 'Antone', 'Vicky', 'Clay', 'Arron', 'Bernard'] },
         ],
         NW: [
           { tigers: ['Shu', 'Esther'] },
           { bears: ['Hiram', 'Edwardo', 'Milan'] },
-          { elephants: ['Ilana', 'Orval', 'Bea', 'Jefferson'] }
+          { elephants: ['Ilana', 'Orval', 'Bea', 'Jefferson'] },
         ],
         SE: [
           { penguins: ['Joe', 'Tad', 'Keri', 'Nicholas'] },
-          { otters: ['Neville', 'Lloyd', 'Mercedes', 'Margherita'] }
+          { otters: ['Neville', 'Lloyd', 'Mercedes', 'Margherita'] },
         ],
         SW: [
           { frogs: ['Cathey', 'Annice'] },
-          { snakes: ['Paulette', 'Bill'] }
-        ]
+          { snakes: ['Paulette', 'Bill'] },
+        ],
       };
   
       expect(actual).toEqual(expected);
@@ -49,74 +49,74 @@ describe('7 - Crie um mapeamento geográfico das espécies e seus animais', () =
       const expected = {
         NE: [
           { lions: ['Dee', 'Faustino', 'Maxwell', 'Zena'] },
-          { giraffes: ['Antone', 'Arron', 'Bernard', 'Clay', 'Gracia', 'Vicky'] }
+          { giraffes: ['Antone', 'Arron', 'Bernard', 'Clay', 'Gracia', 'Vicky'] },
         ],
         NW: [
           { tigers: ['Esther', 'Shu'] },
           { bears: ['Edwardo', 'Hiram', 'Milan'] },
-          { elephants: ['Bea', 'Ilana', 'Jefferson', 'Orval'] }
+          { elephants: ['Bea', 'Ilana', 'Jefferson', 'Orval'] },
         ],
         SE: [
           { penguins: ['Joe', 'Keri', 'Nicholas', 'Tad'] },
-          { otters: ['Lloyd', 'Margherita', 'Mercedes', 'Neville'] }
+          { otters: ['Lloyd', 'Margherita', 'Mercedes', 'Neville'] },
         ],
         SW: [
-          { frogs: ['Annice', 'Cathey'] }, { snakes: ['Bill', 'Paulette'] }
-        ]
+          { frogs: ['Annice', 'Cathey'] }, { snakes: ['Bill', 'Paulette'] },
+        ],
       };
   
       expect(actual).toEqual(expected);
     });
   
     it('Com a opção `sex: \'female\'` ou `sex: \'male\'` especificada, retorna somente nomes de animais macho/fêmea', () => {
-      const options = { includeNames: true, sex: 'female' }
+      const options = { includeNames: true, sex: 'female' };
       const actual = getAnimalMap(options);
   
       const expected = {
         NE: [
           { lions: ['Zena', 'Dee'] },
-          { giraffes: ['Gracia', 'Vicky'] }
+          { giraffes: ['Gracia', 'Vicky'] },
         ],
         NW: [
           { tigers: ['Shu', 'Esther'] },
           { bears: [] },
-          { elephants: ['Ilana', 'Bea'] }
+          { elephants: ['Ilana', 'Bea'] },
         ],
         SE: [
           { penguins: ['Keri'] },
-          { otters: ['Mercedes', 'Margherita'] }
+          { otters: ['Mercedes', 'Margherita'] },
         ],
         SW: [
           { frogs: ['Cathey', 'Annice'] },
-          { snakes: ['Paulette'] }
-        ]
+          { snakes: ['Paulette'] },
+        ],
       };
   
       expect(actual).toEqual(expected);
     });
   
     it('Com a opção `sex: \'female\'` ou `sex: \'male\'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados', () => {
-      const options = { includeNames: true, sex: 'female', sorted: true }
+      const options = { includeNames: true, sex: 'female', sorted: true };
       const actual = getAnimalMap(options);
       
       const expected = {
         NE: [
           { lions: ['Dee', 'Zena'] },
-          { giraffes: ['Gracia', 'Vicky'] }
+          { giraffes: ['Gracia', 'Vicky'] },
         ],
         NW: [
           { tigers: ['Esther', 'Shu'] },
           { bears: [] },
-          { elephants: ['Bea', 'Ilana'] }
+          { elephants: ['Bea', 'Ilana'] },
         ],
         SE: [
           { penguins: ['Keri'] },
-          { otters: ['Margherita', 'Mercedes'] }
+          { otters: ['Margherita', 'Mercedes'] },
         ],
         SW: [
           { frogs: ['Annice', 'Cathey'] },
-          { snakes: ['Paulette'] }
-        ]
+          { snakes: ['Paulette'] },
+        ],
       };
   
       expect(actual).toEqual(expected);
@@ -127,10 +127,10 @@ describe('7 - Crie um mapeamento geográfico das espécies e seus animais', () =
         NE: ['lions', 'giraffes'],
         NW: ['tigers', 'bears', 'elephants'],
         SE: ['penguins', 'otters'],
-        SW: ['frogs', 'snakes']
+        SW: ['frogs', 'snakes'],
       };
   
-      const options = { sex: 'female' }
+      const options = { sex: 'female' };
       const actual = getAnimalMap(options);
   
       expect(actual).toEqual(expected);
@@ -141,10 +141,10 @@ describe('7 - Crie um mapeamento geográfico das espécies e seus animais', () =
         NE: ['lions', 'giraffes'],
         NW: ['tigers', 'bears', 'elephants'],
         SE: ['penguins', 'otters'],
-        SW: ['frogs', 'snakes']
+        SW: ['frogs', 'snakes'],
       };
   
-      const options = { sex: 'female', sorted: true }
+      const options = { sex: 'female', sorted: true };
       const actual = getAnimalMap(options);
   
       expect(actual).toEqual(expected);

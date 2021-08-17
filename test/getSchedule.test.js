@@ -1,6 +1,6 @@
 const getSchedule = require('../src/getSchedule');
 
-describe('8 - Crie uma função para retornar o dia que os animais estão disponíveis', () => {
+describe('8 - Crie o agendamento que disponibilize as informações de horário dos animais com o dia que os animais estão disponíveis', () => {
   describe('Implemente a função getSchedule', () => {
     it('deveria retornar um objeto com os horários do dia e os animais em exibição quando não houver parâmetros', () => {
       const actual = getSchedule();
@@ -8,19 +8,19 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
       const expected = {
         'Tuesday': {
           'officeHour': 'Open from 8am until 18pm',
-          'exhibition': [ 'lions', 'tigers', 'bears', 'penguins', 'elephants', 'giraffes' ]
+          'exhibition': [ 'lions', 'tigers', 'bears', 'penguins', 'elephants', 'giraffes' ],
         },
         'Wednesday': {
           'officeHour': 'Open from 8am until 18pm',
-          'exhibition': [ 'tigers', 'bears', 'penguins', 'otters', 'frogs', 'giraffes' ]
+          'exhibition': [ 'tigers', 'bears', 'penguins', 'otters', 'frogs', 'giraffes' ],
         },
         'Thursday': {
           'officeHour': 'Open from 10am until 20pm',
-          'exhibition': [ 'lions', 'otters', 'frogs', 'snakes', 'giraffes' ]
+          'exhibition': [ 'lions', 'otters', 'frogs', 'snakes', 'giraffes' ],
         },
         'Friday': {
           'officeHour': 'Open from 10am until 20pm',
-          'exhibition': [ 'tigers', 'otters', 'frogs', 'elephants', 'giraffes' ]
+          'exhibition': [ 'tigers', 'otters', 'frogs', 'elephants', 'giraffes' ],
         },
         'Saturday': {
           'officeHour': 'Open from 8am until 22pm',
@@ -28,14 +28,14 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
             'lions',  'tigers',
             'bears',  'penguins',
             'otters', 'frogs',
-            'snakes', 'elephants'
-          ]
+            'snakes', 'elephants',
+          ],
         },
         'Sunday': {
           'officeHour': 'Open from 8am until 20pm',
-          'exhibition': [ 'lions', 'bears', 'penguins', 'snakes', 'elephants' ]
+          'exhibition': [ 'lions', 'bears', 'penguins', 'snakes', 'elephants' ],
         },
-        'Monday': { 'officeHour': 'CLOSED', 'exhibition': 'The zoo will be closed!' }
+        'Monday': { 'officeHour': 'CLOSED', 'exhibition': 'The zoo will be closed!' },
       };
   
       expect(actual).toEqual(expected);
@@ -47,19 +47,19 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
       const expected = {
         'Tuesday': {
           'officeHour': 'Open from 8am until 18pm',
-          'exhibition': [ 'lions', 'tigers', 'bears', 'penguins', 'elephants', 'giraffes' ]
+          'exhibition': [ 'lions', 'tigers', 'bears', 'penguins', 'elephants', 'giraffes' ],
         },
         'Wednesday': {
           'officeHour': 'Open from 8am until 18pm',
-          'exhibition': [ 'tigers', 'bears', 'penguins', 'otters', 'frogs', 'giraffes' ]
+          'exhibition': [ 'tigers', 'bears', 'penguins', 'otters', 'frogs', 'giraffes' ],
         },
         'Thursday': {
           'officeHour': 'Open from 10am until 20pm',
-          'exhibition': [ 'lions', 'otters', 'frogs', 'snakes', 'giraffes' ]
+          'exhibition': [ 'lions', 'otters', 'frogs', 'snakes', 'giraffes' ],
         },
         'Friday': {
           'officeHour': 'Open from 10am until 20pm',
-          'exhibition': [ 'tigers', 'otters', 'frogs', 'elephants', 'giraffes' ]
+          'exhibition': [ 'tigers', 'otters', 'frogs', 'elephants', 'giraffes' ],
         },
         'Saturday': {
           'officeHour': 'Open from 8am until 22pm',
@@ -67,14 +67,14 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
             'lions',  'tigers',
             'bears',  'penguins',
             'otters', 'frogs',
-            'snakes', 'elephants'
-          ]
+            'snakes', 'elephants',
+          ],
         },
         'Sunday': {
           'officeHour': 'Open from 8am until 20pm',
-          'exhibition': [ 'lions', 'bears', 'penguins', 'snakes', 'elephants' ]
+          'exhibition': [ 'lions', 'bears', 'penguins', 'snakes', 'elephants' ],
         },
-        'Monday': { 'officeHour': 'CLOSED', 'exhibition': 'The zoo will be closed!' }
+        'Monday': { 'officeHour': 'CLOSED', 'exhibition': 'The zoo will be closed!' },
       };
     
       expect(actual).toEqual(expected);
@@ -84,7 +84,7 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
       const actual = getSchedule('Monday');
   
       const expected = {
-        'Monday': { 'officeHour': 'CLOSED', 'exhibition': 'The zoo will be closed!' }
+        'Monday': { 'officeHour': 'CLOSED', 'exhibition': 'The zoo will be closed!' },
       };
   
       expect(actual).toEqual(expected);
@@ -97,8 +97,8 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
       const expected = {
         'Tuesday': {
           'officeHour': 'Open from 8am until 18pm',
-          'exhibition': [ 'lions', 'tigers', 'bears', 'penguins', 'elephants', 'giraffes' ]
-        }
+          'exhibition': [ 'lions', 'tigers', 'bears', 'penguins', 'elephants', 'giraffes' ],
+        },
       };
   
       expect(actual).toEqual(expected);
@@ -110,8 +110,8 @@ describe('8 - Crie uma função para retornar o dia que os animais estão dispon
       const expected = {
         'Wednesday': {
           'officeHour': 'Open from 8am until 18pm',
-          'exhibition': [ 'tigers', 'bears', 'penguins', 'otters', 'frogs', 'giraffes' ]
-        }
+          'exhibition': [ 'tigers', 'bears', 'penguins', 'otters', 'frogs', 'giraffes' ],
+        },
       };
       
       expect(actual).toEqual(expected);
