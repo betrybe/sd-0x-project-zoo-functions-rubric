@@ -293,8 +293,8 @@ module.exports = {
       lastName: 'Strauss',
       managers: [],
       responsibleFor: [
-        '01422318-ca2d-46b8-b66c-3e9e188244ed',
         ottersId,
+        '01422318-ca2d-46b8-b66c-3e9e188244ed',
       ],
     },
     {
@@ -320,19 +320,19 @@ module.exports = {
       lastName: 'Elser',
       managers: [stephanieId],
       responsibleFor: [
-        elephantsId,
-        bearsId,
         lionId,
+        bearsId,
+        elephantsId,
       ],
     },
   ],
   hours: {
-    Tuesday: { open: 8, close: 18 },
-    Wednesday: { open: 8, close: 18 },
-    Thursday: { open: 10, close: 20 },
-    Friday: { open: 10, close: 20 },
-    Saturday: { open: 8, close: 22 },
-    Sunday: { open: 8, close: 20 },
+    Tuesday: { open: 8, close: 6 },
+    Wednesday: { open: 8, close: 6 },
+    Thursday: { open: 10, close: 8 },
+    Friday: { open: 10, close: 8 },
+    Saturday: { open: 8, close: 10 },
+    Sunday: { open: 8, close: 8 },
     Monday: { open: 0, close: 0 },
   },
   prices: {

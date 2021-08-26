@@ -21,12 +21,12 @@ jobs:
     needs: [eslint]
     steps:
       - uses: actions/checkout@v2
-      - name: Jest evaluator step
+      - name: Evaluator step
         id: test
-        uses: betrybe/jest-evaluator-action@v5
+        uses: betrybe/jest-evaluator-action@v7
         with:
           repository-test-name: 'betrybe/sd-0x-project-zoo-functions-tests'
-          repository-test-branch: 'master'
+          repository-test-branch: 'main-new-zoo'
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
         with:

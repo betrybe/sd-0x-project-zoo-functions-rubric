@@ -22,6 +22,9 @@ Neste projeto, verificamos se você é capaz de:
 
 ## Sumário
 
+- [Boas vindas ao repositório do projeto de ES6 e Higher Order Functions!](#boas-vindas-ao-repositório-do-projeto-de-es6-e-higher-order-functions)
+- [Habilidades](#habilidades)
+- [Sumário](#sumário)
 - [Entregáveis](#entregáveis)
   - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
   - [Desenvolvimento](#desenvolvimento)
@@ -29,19 +32,20 @@ Neste projeto, verificamos se você é capaz de:
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+  - [Dica para o desenvolvimento](#dica-para-o-desenvolvimento)
+  - [Depois de terminar o desenvolvimento (Opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [1. Implemente a função `getSpeciesByIds`](#1-implemente-a-função-getspeciesbyids)
   - [2. Implemente a função `getAnimalsOlderThan`](#2-implemente-a-função-getanimalsolderthan)
   - [3. Implemente a função `getEmployeeByName`](#3-implemente-a-função-getemployeebyname)
-  - [4. Implemente a função `isManager`](#4-implemente-a-função-ismanager)
+  - [4. Implemente a função `getRelatedEmployees`](#4-implemente-a-função-getrelatedemployees)
   - [5. Implemente a função `countAnimals`](#5-implemente-a-função-countanimals)
   - [6. Implemente a função `calculateEntry`](#6-implemente-a-função-calculateentry)
   - [7. Implemente a função `getAnimalMap`](#7-implemente-a-função-getanimalmap)
   - [8. Implemente a função `getSchedule`](#8-implemente-a-função-getschedule)
   - [9. Implemente a função `getOldestFromFirstSpecies`](#9-implemente-a-função-getoldestfromfirstspecies)
   - [10. Implemente a função `getEmployeesCoverage`](#10-implemente-a-função-getemployeescoverage)
-- [Avisos finais](#avisos-finais)
+- [Avisos Finais](#avisos-finais)
   - [Revisando um Pull Request](#revisando-um-pull-request)
   - [Avaliação do projeto](#avaliação-do-projeto)
   - [Ordem dos requisitos no avaliador automático](#ordem-dos-requisitos-no-avaliador-automático)
@@ -185,28 +189,28 @@ Esta função é responsável pela busca das espécies de animais por id. Ela re
 
 **Observações técnicas**
 
-- O parâmetro desta função pode ser alterado para atender ao requisito proposto
+- O parâmetro desta função pode ser alterado para atender ao requisito proposto.
 
 **O que será avaliado**
 
-- Caso receba nenhum parâmetro, necessário retornar um array vazio
-- Ao receber como parâmetro um único id, retorna um array com a espécie referente à esse id
-- Ao receber mais de um id, retorna um array com as espécies referentes aos ids
+- Caso receba nenhum parâmetro, necessário retornar um array vazio;
+- Ao receber como parâmetro um único id, retorna um array com a espécie referente à esse id;
+- Ao receber mais de um id, retorna um array com as espécies referentes aos ids.
 
 ---
 
 ### 2. Implemente a função `getAnimalsOlderThan`
 
-Esta função, a partir do nome de uma espécie e uma idade mínima, verifica se todos os animais daquela espécie possuem a idade mínima especificada
+Esta função, a partir do nome de uma espécie e uma idade mínima, verifica se todos os animais daquela espécie possuem a idade mínima especificada.
 
 **Observações técnicas**
 
-- Deve retornar um valor booleano
+- Deve retornar um valor booleano.
 
 **O que será avaliado**
 
 - Ao passar o nome de uma espécie e uma idade, testa se todos os animais desta
-espécie possuem a idade mínima especificada
+espécie possuem a idade mínima especificada.
 
 ---
 
@@ -226,10 +230,13 @@ Esta função é responsável pela busca das pessoas colaboradoras através do p
 
 Considerando a boa prática de dividir o código em partes menores, apresentamos a função `getRelatedEmployees` em que você deverá dividí-la em duas funções: 
   
-  1 - `isManager` - que será responsável por verificar se uma pessoa colaboradora é gerente ou não. O retorno dessa função deve ser um booleano: `true`ou `false`;
-  2 - `getRelatedEmployees` - que utiliza a primeira função para apresentar as seguintes saídas: 
-     * se for uma pessoa colaboradora gerente, deve retornar um array contendo os nomes das pessoas colaboradoras que ela é responsável;
-     * se **não** for uma pessoa colaboradora gerente, deverá ser lançado um error gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"O id inserido não é de uma pessoa colaboradora gerente!"**. Exemplo:
+1 - `isManager` - que será responsável por verificar se uma pessoa colaboradora é gerente ou não. O retorno dessa função deve ser um booleano: `true`ou `false`;
+
+2 - `getRelatedEmployees` - que utiliza a primeira função para apresentar as seguintes saídas: 
+  * se for uma pessoa colaboradora gerente, deve retornar um array contendo os nomes das pessoas colaboradoras que ela é responsável;
+  * se **não** for uma pessoa colaboradora gerente, deverá ser lançado um error gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"O id inserido não é de uma pessoa colaboradora gerente!"**.
+
+Exemplo:
 
 ```javascript
 throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
@@ -240,7 +247,8 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
   **Observações técnicas**
 
   - Retorna um array contendo nome e sobrenome das pessoas colaboradoras gerenciadas por determinada pessoa com cargo de gerência.
-    Exemplo de output:
+  
+  Exemplo de output:
 
   ```javascript
   [ 'Burl Bethea', 'Ola Orloff', 'Emery Elser' ];
@@ -250,6 +258,8 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
 
   **O que será avaliado**
 
+  - Retorna `true` se o id passado for de um gerente;
+  - Retorna `false` se o id passado não for de um gerente;
   - Se o id passado for de um gerente, retorna um array contendo nome e sobrenome das pessoas colaboradoras que ela é responsável;
   - Se o id passado **não** for de um gerente, dispara um erro com a mensagem: "O id inserido não é de uma pessoa colaboradora gerente!".
 
@@ -261,15 +271,15 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
 
 **Observações técnicas**
 
-  - Se nenhum argumento for passado, retorna um objeto cujo o nome de cada espécie é uma chave desse objeto, e o total de animais dessa espécie é o seu valor
-  - Com o argumento `{ specie: 'penguins' }`, retorna um número, a quantidade de pinguins no zoológico
-  - Com o argumento `{ specie: 'giraffes', genre: 'female' }`, retorna um número, a quantidade de girafas do gênero feminino
+  - Se nenhum argumento for passado, retorna um objeto cujo o nome de cada espécie é uma chave desse objeto, e o total de animais dessa espécie é o seu valor;
+  - Com o argumento `{ specie: 'penguins' }`, retorna um número, a quantidade de pinguins no zoológico;
+  - Com o argumento `{ specie: 'giraffes', gender: 'female' }`, retorna um número, a quantidade de girafas do gênero feminino.
 
 **O que será avaliado**
 
-  - Sem parâmetros, retorna as espécies e sua quantidade
-  - Recebendo como parâmetro um objeto com a chave `specie`, retorna um número, a quantidade de animais daquela espécie
-  - Recebendo como parâmetro um objeto com a chave `specie` e `genre`, retorna um número, a quantidade de animais daquela espécie, no gênero selecionado
+  - Sem parâmetros, retorna as espécies e sua quantidade;
+  - Recebendo como parâmetro um objeto com a chave `specie`, retorna um número, a quantidade de animais daquela espécie;
+  - Recebendo como parâmetro um objeto com a chave `specie` e `gender`, retorna um número, a quantidade de animais daquela espécie, no gênero selecionado.
 
 ### 6. Implemente a função `calculateEntry`
 
@@ -326,6 +336,7 @@ calculateEntry(entrants);
 
 **O que será avaliado**
 
+- Ao receber um array de visitantes, retorna um objeto com a contagem;
 - Retorna 0 se nenhum argumento for passado;
 - Retorna 0 se um objeto vazio for passado;
 - Retorna o preço total a ser cobrado dado o array de pessoas.
@@ -334,20 +345,20 @@ calculateEntry(entrants);
 
 ### 7. Implemente a função `getAnimalMap`
 
-A função é responsável pelo mapeamento geográfico das espécies e seus animais, podendo ainda filtrá-los por ordem alfabética e gênero, por exemplo
+A função é responsável pelo mapeamento geográfico das espécies e seus animais, podendo ainda filtrá-los por ordem alfabética e gênero.
 
 **Observações técnicas**
 
-- Analise o teste unitário para entender os retornos que são esperados para esta função
+- Analise o teste unitário para entender os retornos que são esperados para esta função.
 
 **O que será avaliado**
 
-- Sem parâmetros, retorna animais categorizados por localização
-- Com a opção `includeNames: true` especificada, retorna nomes de animais
-- Com a opção `sorted: true` especificada, retorna nomes de animais ordenados
-- Com a opção `sex: 'female'` ou `sex: 'male'` especificada, retorna somente nomes de animais macho/fêmea
-- Com a opção `sex: 'female'` ou `sex: 'male'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados
-- Só retorna informações ordenadas e com sexo se a opção `includeNames: true` for especificada
+- Sem parâmetros, retorna animais categorizados por localização;
+- Com a opção `includeNames: true` especificada, retorna nomes de animais;
+- Com a opção `sorted: true` especificada, retorna nomes de animais ordenados;
+- Com a opção `sex: 'female'` ou `sex: 'male'` especificada, retorna somente nomes de animais macho/fêmea;
+- Com a opção `sex: 'female'` ou `sex: 'male'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados;
+- Só retorna informações ordenadas e com sexo se a opção `includeNames: true` for especificada.
 
 ---
 
@@ -357,14 +368,14 @@ A função é responsável por disponibilizar as informações de horário dos a
 
 **Observações técnicas**
 
-- Analise os testes unitários para entender os retornos que são esperados para esta função.
+- Analise os testes unitários para entender os retornos que são esperados para esta função;
 - Quebre o problema em funções menores para que fique mais simples de administrar a responsabilidade de cada uma delas.
 
 **O que será avaliado**
 
-- Sem parâmetros, retorna os horários para cada dia e quais animais estarão disponíveis.
-- Com parâmetros que não sejam nem um animal e nem um dia, retorna os horários para cada dia e quais animais estarão disponíveis.
-- Se um único dia for passado, retorna os horários para aquele dia e quais animais estarão disponíveis.
+- Sem parâmetros, retorna os horários para cada dia e quais animais estarão disponíveis;
+- Com parâmetros que não sejam nem um animal e nem um dia, retorna os horários para cada dia e quais animais estarão disponíveis;
+- Se um único dia for passado, retorna os horários para aquele dia e quais animais estarão disponíveis;
 - Se passar o nome de um animal, deverá retornar um array com os dias em que ele estará em exibição.
  
 ---
@@ -390,7 +401,7 @@ A cobertura deverá ser representada por um objeto com as seguintes propriedades
   "id": "4b40a139-d4dc-4f09-822d-ec25e819a5ad", // id da pessoa
   "fullName": "Sharonda Spry", // nome completo: firstName + lastName
   "species": [ "otters", "frogs" ], // espécies as quais a pessoa é responsável
-  "locations": [ "SE", "SW" ] // Um array contendo todas as localizações das espécies
+  "locations": [ "SE", "SW" ], // Um array contendo todas as localizações das espécies
 }
 ```
 
@@ -434,19 +445,19 @@ getEmployeesCoverage();
     "id": "c5b83cb3-a451-49e2-ac45-ff3f54fbe7e1",
     "fullName": "Nigel Nelson",
     "species": [ "lions", "tigers" ],
-    "locations": [ "NE", "NW" ]
+    "locations": [ "NE", "NW" ],
   },
   {
     "id": "0e7b460e-acf4-4e17-bcb3-ee472265db83",
     "fullName": "Burl Bethea",
     "species": [ "lions", "tigers", "bears", "penguins" ],
-    "locations": [ "NE", "NW", "NW", "SE" ]
+    "locations": [ "NE", "NW", "NW", "SE" ],
   },
   {
     "id": "fdb2543b-5662-46a7-badc-93d960fdc0a8",
     "fullName": "Ola Orloff",
     "species": [ "otters", "frogs", "snakes", "elephants" ],
-    "locations": [ "SE", "SW", "SW", "NW" ]
+    "locations": [ "SE", "SW", "SW", "NW" ],
   },
   //[...]
 ];
@@ -464,8 +475,8 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
 
 **Observações técnicas**
 
-- Ao receber o objeto de opções com a propriedade name, procura a pessoa funcionária correspondente
-- A opção name deverá aceitar nome e sobrenome para realizar a busca
+- Ao receber o objeto de opções com a propriedade name, procura a pessoa funcionária correspondente;
+- A opção name deverá aceitar nome e sobrenome para realizar a busca;
 - Ao chamar a função sem argumentos ela deve retornar um array com a cobertura de todas as pessoas funcionárias.
 
 **O que será avaliado**
