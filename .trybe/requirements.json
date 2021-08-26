@@ -5,7 +5,7 @@
       "bonus": false
     },
     {
-      "description": "2 - Crie uma função que verifica a idade mínima dos animais",
+      "description": "2 - Crie uma função que verifica se todos os animais de uma espécie possuem a idade mínima especificada",
       "bonus": false
     },
     {
@@ -37,7 +37,7 @@
       "bonus": false
     },
     {
-      "description": "10 - Crie uma associação de informações de cobertura das pessoas funcionárias",
+      "description": "10 - Crie uma associação de informações para cobertura das pessoas funcionárias",
       "bonus": false
     }
   ]

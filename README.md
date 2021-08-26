@@ -258,6 +258,8 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
 
   **O que será avaliado**
 
+  - Retorna `true` se o id passado for de um gerente;
+  - Retorna `false` se o id passado não for de um gerente;
   - Se o id passado for de um gerente, retorna um array contendo nome e sobrenome das pessoas colaboradoras que ela é responsável;
   - Se o id passado **não** for de um gerente, dispara um erro com a mensagem: "O id inserido não é de uma pessoa colaboradora gerente!".
 
@@ -271,13 +273,13 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
 
   - Se nenhum argumento for passado, retorna um objeto cujo o nome de cada espécie é uma chave desse objeto, e o total de animais dessa espécie é o seu valor;
   - Com o argumento `{ specie: 'penguins' }`, retorna um número, a quantidade de pinguins no zoológico;
-  - Com o argumento `{ specie: 'giraffes', genre: 'female' }`, retorna um número, a quantidade de girafas do gênero feminino.
+  - Com o argumento `{ specie: 'giraffes', gender: 'female' }`, retorna um número, a quantidade de girafas do gênero feminino.
 
 **O que será avaliado**
 
   - Sem parâmetros, retorna as espécies e sua quantidade;
   - Recebendo como parâmetro um objeto com a chave `specie`, retorna um número, a quantidade de animais daquela espécie;
-  - Recebendo como parâmetro um objeto com a chave `specie` e `genre`, retorna um número, a quantidade de animais daquela espécie, no gênero selecionado.
+  - Recebendo como parâmetro um objeto com a chave `specie` e `gender`, retorna um número, a quantidade de animais daquela espécie, no gênero selecionado.
 
 ### 6. Implemente a função `calculateEntry`
 
@@ -334,6 +336,7 @@ calculateEntry(entrants);
 
 **O que será avaliado**
 
+- Ao receber um array de visitantes, retorna um objeto com a contagem;
 - Retorna 0 se nenhum argumento for passado;
 - Retorna 0 se um objeto vazio for passado;
 - Retorna o preço total a ser cobrado dado o array de pessoas.
