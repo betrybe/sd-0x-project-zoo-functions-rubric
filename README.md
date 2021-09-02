@@ -70,7 +70,7 @@ Todos os arquivos estritamente necessários para finalizar o projeto já estão 
 
 Você deverá completar as funções de forma a satisfazer os requisitos listados na próxima seção. Na pasta raíz do projeto, temos as pastas `src`, `tests` e `data` . A pasta `src` é composta por arquivos referentes a cada uma das funções que você irá implementar, a pasta `data` contém o arquivo `zoo_data.js`, que armazena os dados que serão utilizados. Já a pasta `tests`, contém os testes unitários correspondentes a cada função, o nome do arquivo é o nome da função alvo acrescido do sufixo `.test.js`.
 
-**Por exemplo:** o arquivo `src/getSpeciesByIds.js` conterá a implementação da função `getSpeciesByIds` e o arquivo `tests/getSpeciesByIds.spec.js` conterá os testes unitários referentes a ela.
+**Por exemplo:** o arquivo `src/getSpeciesByIds.js` conterá a implementação da função `getSpeciesByIds` e o arquivo `tests/getSpeciesByIds.test.js` conterá os testes unitários referentes a ela.
 
 **Os arquivos que não estão indicados nos requisitos não devem ser alterados, ou sua avaliação poderá ser comprometida.**
 
@@ -230,11 +230,11 @@ Esta função é responsável pela busca das pessoas colaboradoras através do p
 
 Considerando a boa prática de dividir o código em partes menores, apresentamos a função `getRelatedEmployees` em que você deverá dividí-la em duas funções: 
   
-1 - `isManager` - que será responsável por verificar se uma pessoa colaboradora é gerente ou não. O retorno dessa função deve ser um booleano: `true`ou `false`;
+1 - `isManager` - que será responsável por verificar se uma pessoa colaboradora é gerente ou não. O retorno dessa função deve ser um booleano: `true` ou `false`;
 
 2 - `getRelatedEmployees` - que utiliza a primeira função para apresentar as seguintes saídas: 
   * se for uma pessoa colaboradora gerente, deve retornar um array contendo os nomes das pessoas colaboradoras que ela é responsável;
-  * se **não** for uma pessoa colaboradora gerente, deverá ser lançado um error gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"O id inserido não é de uma pessoa colaboradora gerente!"**.
+  * se **não** for uma pessoa colaboradora gerente, deverá ser lançado um erro gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"O id inserido não é de uma pessoa colaboradora gerente!"**.
 
 Exemplo:
 
@@ -242,7 +242,7 @@ Exemplo:
 throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
 ```
 
-Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
+Você pode ler mais sobre a [função construtora **Error**, neste link.](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
   **Observações técnicas**
 
@@ -280,6 +280,8 @@ Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR
   - Sem parâmetros, retorna as espécies e sua quantidade;
   - Recebendo como parâmetro um objeto com a chave `specie`, retorna um número, a quantidade de animais daquela espécie;
   - Recebendo como parâmetro um objeto com a chave `specie` e `gender`, retorna um número, a quantidade de animais daquela espécie, no gênero selecionado.
+
+---
 
 ### 6. Implemente a função `calculateEntry`
 
@@ -376,7 +378,7 @@ A função é responsável por disponibilizar as informações de horário dos a
 - Sem parâmetros, retorna os horários para cada dia e quais animais estarão disponíveis;
 - Com parâmetros que não sejam nem um animal e nem um dia, retorna os horários para cada dia e quais animais estarão disponíveis;
 - Se um único dia for passado, retorna os horários para aquele dia e quais animais estarão disponíveis;
-- Se passar o nome de um animal, deverá retornar um array com os dias em que ele estará em exibição.
+- Se o nome de um animal for passado, deverá retornar um array com os dias em que ele estará em exibição.
  
 ---
 
@@ -463,13 +465,13 @@ getEmployeesCoverage();
 ];
 ```
 
-Caso nenhuma pessoa seja encontrada com o nome, sobrenome ou id, deverá ser lançado um error gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"Informações inválidas"**. Exemplo:
+Caso nenhuma pessoa seja encontrada com o nome, sobrenome ou id, deverá ser lançado um erro gerado com a função construtora **Error** da biblioteca padrão do JavaScript com a mensagem **"Informações inválidas"**. Exemplo:
 
 ```javascript
 throw new Error('Informações inválidas');
 ```
 
-Você pode ler mais sobre isto aqui: [Error](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
+Você pode ler mais sobre a [função construtora **Error**, neste link.](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 **Dica**: Crie funções que dividam a tarefa em partes menores, por exemplo, você poderia criar uma função `getSpecies` encarregada somente por buscar o nome das espécies que a pessoa é responsável.
 
