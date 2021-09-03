@@ -9,34 +9,6 @@ eslint no-unused-vars: [
 ]
 */
 
-function getSchedule(dayName) {
-  const { hours } = data;
-  const result = {};
-
-  Object.entries(hours).forEach(([key, value]) => {
-    const { open, close } = value;
-    if (dayName === key || !dayName) {
-      result[key] = (open === 0 && close === 0) ? 'CLOSED'
-        : `Open from ${open}am until ${close - 12}pm`;
-    }
-  });
-  return result;
-}
-
-function getOldestFromFirstSpecies(id) {
-  const { employees } = data;
-  const { species } = data;
-
-  const animId = employees.filter(({ id: ident }) => ident === id)[0]
-    .responsibleFor[0];
-
-  const result = species.filter(({ id: ident }) => ident === animId)[0]
-    .residents
-    .sort((a, b) => b.age - a.age)[0];
-
-  return Object.values(result);
-}
-
 function increasePrices(percentage) {
   const { prices } = data;
   Object.keys(prices).forEach((key) => {
