@@ -1,14 +1,12 @@
-const data = require('../data/zoo_data');
+const { hours, species } = require('../data/zoo_data');
 
 function buildSentence(dayName) {
-  const { open, close } = data.hours[dayName];
-  const IS_OPEN = close - open;
-  if (IS_OPEN) return `Open from ${open}am until ${close}pm`;
-  return 'CLOSED';
+  const { open, close } = hours[dayName];
+  return dayName === 'Monday' ? 'CLOSED' : `Open from ${open}am until ${close}pm`;
 }
 
 function wichAnimalsWillAppear(dayName) {
-  const animals = data.species.filter(({ availability }) => availability.includes(dayName))
+  const animals = species.filter(({ availability }) => availability.includes(dayName))
     .map(({ name }) => name);
   if (animals.length) {
     return animals;
@@ -24,7 +22,7 @@ function getDaySchedule(dayName = false) {
       exhibition: wichAnimalsWillAppear(dayName),
     };
   } else {
-    const days = Object.keys(data.hours);
+    const days = Object.keys(hours);
     days.forEach((day) => {
       FINAL_SCHEDULE[day] = {
         officeHour: buildSentence(day),
@@ -36,14 +34,14 @@ function getDaySchedule(dayName = false) {
 }
 
 function getAnimalSchedule(animalName) {
-  const { availability } = data.species.find(({ name }) => name === animalName);
+  const { availability } = species.find(({ name }) => name === animalName);
   return availability;
 }
 
 function getSchedule(scheduleTarget = false) {
-  const SHOULD_GET_ANIMAL_SCHEDULE = data.species.map((specie) => specie.name)
+  const SHOULD_GET_ANIMAL_SCHEDULE = species.map(({ name }) => name)
     .includes(scheduleTarget);
-  const SHOULD_GET_DAYS_SCHEDULE = Object.keys(data.hours).includes(scheduleTarget);
+  const SHOULD_GET_DAYS_SCHEDULE = Object.keys(hours).includes(scheduleTarget);
 
   if (SHOULD_GET_DAYS_SCHEDULE) return getDaySchedule(scheduleTarget);
   if (SHOULD_GET_ANIMAL_SCHEDULE) return getAnimalSchedule(scheduleTarget);
