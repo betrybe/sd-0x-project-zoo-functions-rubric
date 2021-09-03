@@ -22,7 +22,7 @@ function getDaySchedule(dayName = false) {
     FINAL_SCHEDULE[dayName] = {
       officeHour: buildSentence(dayName),
       exhibition: wichAnimalsWillAppear(dayName),
-    }
+    };
   } else {
     const days = Object.keys(data.hours);
     days.forEach((day) => {
