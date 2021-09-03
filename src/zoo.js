@@ -9,13 +9,6 @@ eslint no-unused-vars: [
 ]
 */
 
-function getAnimalsOlderThan(animal, age) {
-  const { species } = data;
-  return species.filter(({ name }) => name === animal)[0]
-    .residents
-    .every(({ age: idade }) => idade >= age);
-}
-
 function getEmployeeByName(employeeName) {
   if (!employeeName) return {};
   const { employees } = data;
