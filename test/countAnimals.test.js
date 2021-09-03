@@ -1,9 +1,7 @@
-const assert = require('assert');
-const zoo = require('../src/zoo');
+const countAnimals = require('../src/countAnimals');
 
-describe('Implemente a função countAnimals', () => {
-
-  it('Sem parâmetros, retorna animais e suas quantidades', () => {
+describe('5 - Crie uma função que realiza a contagem dos animais de cada espécie', () => {
+  it('sem parâmetros, retorna as espécies e sua quantidade', () => {
     const expected = {
       'lions': 4,
       'tigers': 2,
@@ -13,20 +11,38 @@ describe('Implemente a função countAnimals', () => {
       'frogs': 2,
       'snakes': 2,
       'elephants': 4,
-      'giraffes': 6
+      'giraffes': 6,
     };
-    const actual = zoo.countAnimals();
+    const actual = countAnimals();
 
-    assert.deepStrictEqual(actual, expected);
+    expect(actual).toStrictEqual(expected);
   });
 
-  it('Com o nome de uma espécie de animal, retorna somente a quantidade', () => {
-    let actual = zoo.countAnimals('lions');
-    let expected = 4;
-    assert.deepStrictEqual(actual, expected);
+  it('recebendo como parâmetro um objeto com a chave \'specie\', retorna um número, a quantidade de animais daquela espécie', () => {
+    {
+      const actual = countAnimals({ specie: 'penguins' });
+      const expected = 4;
+      expect(actual).toBe(expected);
+    }
 
-    actual = zoo.countAnimals('snakes');
-    expected = 2;
-    assert.deepStrictEqual(actual, expected);
+    {
+      const actual = countAnimals({ specie: 'giraffes' });
+      const expected = 6;
+      expect(actual).toBe(expected);
+    }
+  });
+
+  it('recebendo como parâmetro um objeto com a chave \'specie\' e \'gender\', retorna um número, a quantidade de animais daquela espécie, no gênero selecionado', () => {
+    {
+      const actual = countAnimals({ specie: 'bears', gender: 'female' });
+      const expected = 0;
+      expect(actual).toBe(expected);
+    }
+
+    {
+      const actual = countAnimals({ specie: 'elephants', gender: 'male' });
+      const expected = 2;
+      expect(actual).toBe(expected);
+    }
   });
 });
