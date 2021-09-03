@@ -9,15 +9,6 @@ eslint no-unused-vars: [
 ]
 */
 
-function createEmployee(personalInfo, associatedWith) {
-  return { ...personalInfo, ...associatedWith };
-}
-
-function isManager(id) {
-  const { employees } = data;
-  return employees.some(({ managers }) => managers.indexOf(id) !== -1);
-}
-
 function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []) {
   const { employees } = data;
   employees.push({ id, firstName, lastName, managers, responsibleFor });
