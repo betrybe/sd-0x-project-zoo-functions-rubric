@@ -9,14 +9,6 @@ eslint no-unused-vars: [
 ]
 */
 
-function getEmployeeByName(employeeName) {
-  if (!employeeName) return {};
-  const { employees } = data;
-  return employees.filter(({ firstName, lastName }) => (
-    firstName === employeeName || lastName === employeeName
-  ))[0];
-}
-
 function createEmployee(personalInfo, associatedWith) {
   return { ...personalInfo, ...associatedWith };
 }
