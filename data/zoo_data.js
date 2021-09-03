@@ -17,6 +17,7 @@ module.exports = {
       name: 'lions',
       popularity: 4,
       location: 'NE',
+      availability: ['Tuesday', 'Thursday', 'Saturday', 'Sunday'],
       residents: [
         {
           name: 'Zena',
@@ -45,6 +46,7 @@ module.exports = {
       name: 'tigers',
       popularity: 5,
       location: 'NW',
+      availability: ['Wednesday', 'Friday', 'Saturday', 'Tuesday'],
       residents: [
         {
           name: 'Shu',
@@ -63,6 +65,7 @@ module.exports = {
       name: 'bears',
       popularity: 5,
       location: 'NW',
+      availability: ['Tuesday', 'Wednesday', 'Sunday', 'Saturday'],
       residents: [
         {
           name: 'Hiram',
@@ -86,6 +89,7 @@ module.exports = {
       name: 'penguins',
       popularity: 4,
       location: 'SE',
+      availability: ['Tuesday', 'Wednesday', 'Sunday', 'Saturday'],
       residents: [
         {
           name: 'Joe',
@@ -114,6 +118,7 @@ module.exports = {
       name: 'otters',
       popularity: 4,
       location: 'SE',
+      availability: ['Friday', 'Thursday', 'Wednesday', 'Saturday'],
       residents: [
         {
           name: 'Neville',
@@ -142,6 +147,7 @@ module.exports = {
       name: 'frogs',
       popularity: 2,
       location: 'SW',
+      availability: ['Saturday', 'Friday', 'Thursday', 'Wednesday'],
       residents: [
         {
           name: 'Cathey',
@@ -160,6 +166,7 @@ module.exports = {
       name: 'snakes',
       popularity: 3,
       location: 'SW',
+      availability: ['Sunday', 'Saturday', 'Frida', 'Thursday'],
       residents: [
         {
           name: 'Paulette',
@@ -178,6 +185,7 @@ module.exports = {
       name: 'elephants',
       popularity: 5,
       location: 'NW',
+      availability: ['Friday', 'Saturday', 'Sunday', 'Tuesday'],
       residents: [
         {
           name: 'Ilana',
@@ -206,6 +214,7 @@ module.exports = {
       name: 'giraffes',
       popularity: 4,
       location: 'NE',
+      availability: ['Wednesday', 'Thursday', 'Tuesday', 'Friday'],
       residents: [
         {
           name: 'Gracia',
@@ -284,8 +293,8 @@ module.exports = {
       lastName: 'Strauss',
       managers: [],
       responsibleFor: [
-        '01422318-ca2d-46b8-b66c-3e9e188244ed',
         ottersId,
+        '01422318-ca2d-46b8-b66c-3e9e188244ed',
       ],
     },
     {
@@ -311,24 +320,24 @@ module.exports = {
       lastName: 'Elser',
       managers: [stephanieId],
       responsibleFor: [
-        elephantsId,
-        bearsId,
         lionId,
+        bearsId,
+        elephantsId,
       ],
     },
   ],
   hours: {
-    Tuesday: { open: 8, close: 18 },
-    Wednesday: { open: 8, close: 18 },
-    Thursday: { open: 10, close: 20 },
-    Friday: { open: 10, close: 20 },
-    Saturday: { open: 8, close: 22 },
-    Sunday: { open: 8, close: 20 },
+    Tuesday: { open: 8, close: 6 },
+    Wednesday: { open: 8, close: 6 },
+    Thursday: { open: 10, close: 8 },
+    Friday: { open: 10, close: 8 },
+    Saturday: { open: 8, close: 10 },
+    Sunday: { open: 8, close: 8 },
     Monday: { open: 0, close: 0 },
   },
   prices: {
-    Adult: 49.99,
-    Senior: 24.99,
-    Child: 20.99,
+    adult: 49.99,
+    senior: 24.99,
+    child: 20.99,
   },
 };
