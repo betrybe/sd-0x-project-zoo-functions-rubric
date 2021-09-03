@@ -1,14 +1,15 @@
 const data = require('../data/zoo_data');
 
 function isManager(id) {
-  return data.employees
-    .some(({ managers }) => managers.includes(id));
+  const { employees } = data;
+  return employees.some(({ managers }) => managers.includes(id));
 }
 
 function getRelatedEmployees(managerId) {
+  const { employees } = data;
   const verifyManager = isManager(managerId);
   if (verifyManager) {
-    return data.employees
+    return employees
       .filter(({ managers }) => managers.includes(managerId))
       .map(({ firstName, lastName }) => `${firstName} ${lastName}`);
   }
