@@ -5,10 +5,10 @@ function countAnimals(animal) {
     return data.species
       .reduce((acc, { name, residents }) => ({ ...acc, [name]: residents.length }), {});
   }
-  if (animal.genre) {
+  if (animal.gender) {
     return data.species
       .find((eachAnimal) => eachAnimal.name === animal.specie).residents
-      .filter(({ sex }) => sex === animal.genre).length;
+      .filter(({ sex }) => sex === animal.gender).length;
   }
   return data.species.find((eachAnimal) => eachAnimal.name === animal.specie).residents.length;
 }
